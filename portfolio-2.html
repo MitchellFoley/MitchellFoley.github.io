@@ -11,48 +11,51 @@
         </div>
 
         <div class="ajax-page-title">
-            <h1>Portfolio Project 2</h1>
+            <h1>CSC8470 - Cornell-Cards Application</h1>
         </div>
 
         <div class="row">
             <div class="col-sm-7 col-md-7 portfolio-block">
-                <div class="owl-carousel portfolio-page-carousel">
-                    <div class="item">
-                        <img src="images/portfolio/full/1.jpg" alt="" />
-                    </div>
-                    <div class="item">
-                        <img src="images/portfolio/full/2.jpg" alt="" />
-                    </div>
-                    <div class="item">
-                        <img src="images/portfolio/full/3.jpg" alt="" />
-                    </div>
-                </div>
-
-                <div class="portfolio-page-video embed-responsive embed-responsive-16by9">
-                  <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/97102654?autoplay=0"></iframe>
-                </div>
-
-                <!--
-                <div class="portfolio-page-image">
-                    <img src="images/portfolio/1.jpg" alt="">
-                </div>
-                -->
-
-                <script type="text/javascript">
-                    jQuery(document).ready(function($){
-
-                        $('.portfolio-page-carousel').owlCarousel({
-                            smartSpeed:1200,
-                            items: 1,
-                            loop: true,
-                            dots: true,
-                            nav: true,
-                            navText: false,
-                            margin: 10
-                        });
-
-                    });
-                </script>
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Project Documentation</title>
+                </head>
+                <body>
+                    <h2>Project Overview</h2>
+                    <p>The Cornell-Cards application was developed as part of a collaborative project (CSC8470) which aimed at creating a notetaking and knowledge retention tool. The application is inspired by the Cornell notetaking method and is designed to help users organize study materials and review them using a spaced repetition study schedule. The backend application is designed to be paired with a (hypothetic) client-side interface, allowing users to manage notes organized into folders, create cards with concept-explanation pairs, and schedule study sessions. The project adopts an n-tier architectural pattern to promote a clean separation of concerns, ensuring a modular and maintainable codebase.</p>
+                    
+                    <h2>Implementation</h2>
+                    <p>The project involved the following key components:</p>
+                    <ul>
+                      <li><strong>N-Tier Architecture</strong> - The application is divided into three main layers:
+                        <ul>
+                          <li>Wgeb API Layer - which manages HTTP requests/responses, handles authentication, and provides API endpoints for CRUD operations on notes, folders, and cards.</li>
+                          <li>Domain Layer - which contains the business logic, including entity models and services like the spaced repetition algorithm for rescheduling cards.</li>
+                          <li>Infrastructure Layer - which manages data access, including repository implementations and EF Core for database interactions.</li>
+                        </ul>
+                      </li>
+                      <li>The core feature of the application is the spaced repetition algorithm, which schedules card reviews based on user ratings. The algorithm adjusts the review interval depending on the difficulty of recall.</li>
+                      <li>Entity Framework Core (EF Core) was used for data access and manipulation, initially adopting a database-first approach and later integrating ASP.NET Identity for user authentication. The project incorporated automatic database instantiation and seeding for testing purposes.</li>
+                      <li>To improve performance, the application uses asynchronous methods for database operations, particularly in the repository classes.</li>
+                      <li>The application uses ASP.NET Identity and JSON Web Tokens (JWT) for secure user authentication and authorization. The ASP.NET middleware pipeline checks JWT validity and ensures users can only access their resources.</li>
+                      <li>Git was used for version control, with a feature branch strategy to allow isolated development of features and integration into the main codebase.</li>
+                      <li>The xUnit framework, along with Moq for mocking dependencies, was used for unit testing the application’s components.</li>
+                      <li>Serilog was configured for error logging, capturing and storing logs for analysis and troubleshooting. Logs were categorized by severity and stored in a local file sink.</li>
+                    </ul>
+                    
+                    <h2>Lessons</h2>
+                    <p>The Cornell-Cards project completed as part of CSC8470 provided a practical introduction to backend development. The most important takeaways include:</p>
+                    <ol>
+                      <li>Learning how to implement security measures in Web API projects using JSW, ASP.NET Identify and ASP.NET authentication and authorization middleware pipelines</li>
+                      <li>Introduction to scalable software architecture patterns including the n-tier architecture along with design patterns including repositories and services.</li>
+                      <li>How to incorporate unit testing with the xUnit framework in a practical project.</li>
+                    </ol>
+                    
+                </body>
+                </html>
             </div>
 
             <div class="col-sm-5 col-md-5 portfolio-block">
@@ -62,12 +65,11 @@
                         <h3>Description</h3>
                     </div>
                     <ul class="project-general-info">
-                        <li><p><i class="fa fa-user"></i> Alex Smith</p></li>
-                        <li><p><i class="fa fa-globe"></i> <a href="#" target="_blank">www.project-site.com</a></p></li>
-                        <li><p><i class="fa fa-calendar"></i> 25 december, 2016</p></li>
+                        <li><p><i class="fa fa-user"></i> AKA Studios</p></li>
+                        <li><p><i class="fa fa-calendar"></i> 2024</p></li>
                     </ul>
 
-                    <p class="text-justify">Aliquam euismod aliquam massa, quis eleifend dui sodales vitae. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                    <p class="text-justify">The Cornell-Cards application is a backend notetaking tool designed for note-management and revision using a spaced-repetition algorithm. The application is built using an n-tier architecture using ASP.NET</p>
                     <!-- /Project Description -->
 
                     <!-- Technology -->
@@ -76,26 +78,16 @@
                             <h3>Technology</h3>
                         </div>
                         <ul class="tags">
-                            <li><a>HTML5</a></li>
-                            <li><a>CSS3</a></li>
-                            <li><a>jQuery</a></li>
-                            <li><a>Ajax</a></li>
-                            <li><a>PHP5</a></li>
+                            <li><a>C#</a></li>
+                            <li><a>ASP.NET</a></li>
+                            <li><a>JSON Web Tokens (JWT)</a></li>
+                            <li><a>Entity Framework Core (EF Core)</a></li>
+                            <li><a>xUnit</a></li>
+                            <li><a>Serilog</a></li>
                         </ul>
                     </div>
                     <!-- /Technology -->
-
-                    <!-- Share Buttons -->
-                    <div class="btn-group share-buttons">
-                        <div class="block-title">
-                            <h3>Share</h3>
-                        </div>
-                        <a href="#" target="_blank" class="btn"><i class="fab fa-facebook"></i> </a>
-                        <a href="#" target="_blank" class="btn"><i class="fab fa-twitter"></i> </a>
-                        <a href="#" target="_blank" class="btn"><i class="fab fa-dribbble"></i> </a>
-                    </div>
-                    <!-- /Share Buttons -->
-                </div>
+                </div> </div>
                 <!-- Project Description -->
             </div>
         </div>
