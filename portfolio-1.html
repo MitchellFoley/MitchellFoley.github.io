@@ -14,89 +14,67 @@
             <h1>Portfolio Project 1</h1>
         </div>
 
-        <div class="row">
-            <div class="col-sm-7 col-md-7 portfolio-block">
-                <div class="owl-carousel portfolio-page-carousel">
-                    <div class="item">
-                        <img src="images/portfolio/full/1.jpg" alt="" />
-                    </div>
-                    <div class="item">
-                        <img src="images/portfolio/full/2.jpg" alt="" />
-                    </div>
-                    <div class="item">
-                        <img src="images/portfolio/full/3.jpg" alt="" />
-                    </div>
+        <div class="col-sm-5 col-md-5 portfolio-block">
+            <!-- Project Description -->
+            <div class="project-description">
+                <div class="block-title">
+                    <h3>Description</h3>
                 </div>
+                <ul class="project-general-info">
+                    <li><p><i class="fa fa-user"></i> AKA Studios</p></li>
+                    <li><p><i class="fa fa-calendar"></i> 2024</p></li>
+                </ul>
 
-                <div class="portfolio-page-video embed-responsive embed-responsive-16by9">
-                  <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/97102654?autoplay=0"></iframe>
-                </div>
+                <p class="text-justify">This project, part of the CSC6200 capstone, developed an ICT solution using Microsoft365 tools to address workflow inefficiencies for a B2B service business. The implementation included a SharePoint Hub Site, a Power App interface, and automated workflows via Power Automate to streamline project management and document handling.</p>
 
-                <!--
-                <div class="portfolio-page-image">
-                    <img src="images/portfolio/1.jpg" alt="">
-                </div>
-                -->
+                <h2>Project Overview</h2>
+                <p>Initiated as part of the CSC6200 capstone unit, this project involved the development of an ICT solution for a real-world client as part of a professional team. Our client, a small business specializing in B2B services including marketing and brand development, faced workflow inefficiencies primarily due to a lack of project discoverability and efficient document management. The existing setup failed to effectively capture project information and project activity, leading to delays, miscommunication, and difficulties tracking progress.</p>
+                <p>To address these issues, our student team developed a comprehensive solution incorporating Microsoft 365 products, specifically SharePoint, Power App, and Power Automate. As project manager, I coordinated the project throughout three sprint periods:</p>
+                <ul>
+                    <li><strong>Sprint 1:</strong> SharePoint implementation</li>
+                    <li><strong>Sprint 2:</strong> Development of Power App functionality</li>
+                    <li><strong>Sprint 3:</strong> Finalization and documentation</li>
+                </ul>
 
-                <script type="text/javascript">
-                    jQuery(document).ready(function($){
-
-                        $('.portfolio-page-carousel').owlCarousel({
-                            smartSpeed:1200,
-                            items: 1,
-                            loop: true,
-                            dots: true,
-                            nav: true,
-                            navText: false,
-                            margin: 10
-                        });
-
-                    });
-                </script>
-            </div>
-
-            <div class="col-sm-5 col-md-5 portfolio-block">
-                <!-- Project Description -->
-                <div class="project-description">
-                    <div class="block-title">
-                        <h3>Description</h3>
-                    </div>
-                    <ul class="project-general-info">
-                        <li><p><i class="fa fa-user"></i> Alex Smith</p></li>
-                        <li><p><i class="fa fa-globe"></i> <a href="#" target="_blank">www.project-site.com</a></p></li>
-                        <li><p><i class="fa fa-calendar"></i> 25 december, 2016</p></li>
-                    </ul>
-
-                    <p class="text-justify">Aliquam euismod aliquam massa, quis eleifend dui sodales vitae. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-                    <!-- /Project Description -->
-
-                    <!-- Technology -->
-                    <div class="tags-block">
-                        <div class="block-title">
-                            <h3>Technology</h3>
-                        </div>
-                        <ul class="tags">
-                            <li><a>HTML5</a></li>
-                            <li><a>CSS3</a></li>
-                            <li><a>jQuery</a></li>
-                            <li><a>Ajax</a></li>
-                            <li><a>PHP5</a></li>
+                <h2>Implementation</h2>
+                <p>The solution incorporated the following aspects:</p>
+                <ol>
+                    <li><strong>SharePoint Hub Site</strong> – The primary hub site was used for storage of project information (project details, client contact information, and project activity logs) as well as the project-specific documents and files.</li>
+                    <li><strong>Power App</strong> – The user interface (UI) which used the information/files stored in SharePoint across six (6) screens:
+                        <ul>
+                            <li><strong>Dashboard:</strong> Used to display a list of projects, filtered by status and stage. This screen also incorporates options for creating new clients and projects. Users can “open” a project to view project-specific screens (described below).</li>
+                            <li><strong>Overview:</strong> View and edit information of a specific project.</li>
+                            <li><strong>Client Details:</strong> View and edit client information.</li>
+                            <li><strong>Documents:</strong> In-app SharePoint folder navigation with options for viewing document details, file upload, check-out, and check-in (integrated with SharePoint versioning).</li>
+                            <li><strong>Activities:</strong> Displays the activity logs for that project which are automatically generated when users edit project details.</li>
+                            <li><strong>Settings:</strong> Troubleshooting information and options to refresh data.</li>
                         </ul>
-                    </div>
-                    <!-- /Technology -->
+                    </li>
+                    <li><strong>Power Automate</strong> – A number of Power Automate “flows” were developed to implement more complex workflows. These flows are triggered manually from user actions in Power App or when certain events occur. These workflows included log generation, project folder creation, file upload to SharePoint, document check-out, and check-in from SharePoint (integrating with its versioning capabilities).</li>
+                </ol>
 
-                    <!-- Share Buttons -->
-                    <div class="btn-group share-buttons">
-                        <div class="block-title">
-                            <h3>Share</h3>
-                        </div>
-                        <a href="#" target="_blank" class="btn"><i class="fab fa-facebook"></i> </a>
-                        <a href="#" target="_blank" class="btn"><i class="fab fa-twitter"></i> </a>
-                        <a href="#" target="_blank" class="btn"><i class="fab fa-dribbble"></i> </a>
+                <h2>Lessons</h2>
+                <p>There were many important takeaways and adjustments to the way that I would personally approach future ICT projects. Of the many different lessons discussed in this self-reflection report, the three most significant changes will include:</p>
+                <ol>
+                    <li>Rethink how I approach agile software development planning by implementing features based on their importance to the business rather than their association with a specific part of the technology stack. Furthermore, validate that the most critical features will work as expected by developing a prototype rather than just relying on research.</li>
+                    <li>Further develop the processes that I use during sprint planning and retrospectives. Rather than simply defining the tasks that need to be completed, incorporate holistic considerations such as quality requirements, budget implications, etc. This will improve communication with the project team and ensure better adherence to the project plan.</li>
+                    <li>Improve communication skills, including how I approach open-ended questions, as well as preparing/sharing meeting materials in advance. Practicing these skills in the future will help ensure that meetings are shorter while providing more value.</li>
+                </ol>
+
+                <!-- /Project Description -->
+
+                <!-- Technology -->
+                <div class="tags-block">
+                    <div class="block-title">
+                        <h3>Technology</h3>
                     </div>
-                    <!-- /Share Buttons -->
+                    <ul class="tags">
+                        <li><span>MS SharePoint</span></li>
+                        <li><span>MS Power Automate</span></li>
+                        <li><span>MS Power App</span></li>
+                    </ul>
                 </div>
-                <!-- Project Description -->
+                <!-- /Technology -->
             </div>
         </div>
     </div>
